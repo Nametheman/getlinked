@@ -108,3 +108,4 @@ button {
   max-height: 1000px;
   opacity: 1;
 }
+.faq:nth-child(1){}
