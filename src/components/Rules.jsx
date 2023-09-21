@@ -57,8 +57,8 @@ const Wrapper = styled.section`
   justify-content: center;
   gap: 2rem;
   padding: 1rem 7rem;
-  border: 3px solid red;
   position: relative;
+  border-bottom: 1px solid #ffffff2e;
 
   .left {
     flex: 1;

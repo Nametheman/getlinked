@@ -20,6 +20,7 @@ export default Star;
 const Wrapper = styled.img`
   position: absolute;
   z-index: 2;
+  /* width: 10px; */
   top: ${(props) => (props.$top ? props.$top : "unset")};
   left: ${(props) => (props.$left ? props.$left : "unset")};
   right: ${(props) => (props.$right ? props.$right : "unset")};
