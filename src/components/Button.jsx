@@ -66,3 +66,4 @@ const ButtonWrapper = styled.button`
     font-weight: ${(props) => (props.$svgWeight ? props.$svgWeight : "unset")};
   }
 `;
+`

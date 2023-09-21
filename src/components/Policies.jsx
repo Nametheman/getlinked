@@ -57,7 +57,7 @@ const Policies = () => {
               width="150px"
               height="50px"
               fontSize=".8rem"
-            />
+            />``
           </div>
         </div>
       </div>
