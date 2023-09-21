@@ -23,7 +23,7 @@ const Wrapper = styled.section`
   justify-content: center;
   flex-direction: column;
   /* gap: 2rem; */
-  padding: 4rem 7rem 7rem;
+  padding: 4rem 7rem 9rem;
   position: relative;
   border-bottom: 1px solid #ffffff2e;
 

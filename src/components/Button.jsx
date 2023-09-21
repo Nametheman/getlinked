@@ -16,6 +16,7 @@ const Button = ({
   svgWeight,
   marginBottom,
   fontWeight,
+  fontSize,
 }) => {
   const btnOnClickHandler = () => {
     action();
@@ -32,6 +33,7 @@ const Button = ({
       $svgSize={svgSize}
       $marginBottom={marginBottom}
       $fontWeight={fontWeight}
+      $fontSize={fontSize}
       onClick={btnOnClickHandler}
     >
       {iconType === "img" ? <img src={icon} alt="icon_png" /> : icon}
