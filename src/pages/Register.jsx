@@ -5,7 +5,8 @@ import RegisterForm from "../components/RegisterForm";
 import SuccessModal from "../components/SuccessModal";
 
 const Register = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <Wrapper>
       <div className="left">
