@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import partners from "../assets/images/partners.svg";
+import partners from "../assets/images/Partners.svg";
 
 const Sponsors = () => {
   return (
