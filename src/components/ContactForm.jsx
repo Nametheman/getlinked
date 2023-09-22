@@ -3,18 +3,22 @@ import styled from "styled-components";
 import { colors } from "../bits/colors";
 import Button from "./Button";
 import { emailPattern } from "../helpers/verifiers";
+import { Base_Url } from "../config/config";
+import toast from "react-hot-toast";
+import { Rings, CirclesWithBar } from "react-loader-spinner";
 
 const ContactForm = () => {
   const [contactData, setContactData] = useState({
-    name: "",
+    first_name: "",
     email: "",
     message: "",
   });
   const [isValidEmail, setIsValidEmail] = useState(false);
+  const [submitLoading, setSubmitLoading] = useState(false);
 
   const checkBtnReady = () => {
     if (
-      contactData.name &&
+      contactData.first_name &&
       contactData.email &&
       contactData.message &&
       isValidEmail
@@ -38,11 +42,38 @@ const ContactForm = () => {
     }
     checkBtnReady();
   };
-  const formSubmitHandler = (e) => {
-    e.preventDefault();
-    console.log(contactData);
+
+  const contactHandler = async () => {
+    try {
+      setSubmitLoading(true);
+      const response = await fetch(`${Base_Url}/hackathon/contact-form`, {
+        method: "POST",
+        body: JSON.stringify(contactData),
+        headers: {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      setSubmitLoading(false);
+      if (response.status === 201) {
+        toast(
+          "Your Message have been received! We will get back to you shortly."
+        );
+      } else {
+        toast("Something went wrong, please try again.");
+      }
+      console.log(data);
+    } catch (error) {
+      setSubmitLoading(false);
+      toast("Something went wrong, please try again.");
+    }
   };
 
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    contactHandler();
+  };
   return (
     <Wrapper>
       <h3>Questions or need assistance?</h3>
@@ -52,7 +83,7 @@ const ContactForm = () => {
           type="text"
           placeholder="First Name"
           required
-          name="name"
+          name="first_name"
           value={contactData.name}
           onChange={handleInputChange}
         />
@@ -77,12 +108,27 @@ const ContactForm = () => {
         ></textarea>
         <div className="btnWrapper">
           <Button
-            text="Submit"
+            text={
+              submitLoading ? (
+                <Rings
+                  height="50"
+                  width="80"
+                  color={colors.secondary}
+                  radius="6"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="rings-loading"
+                />
+              ) : (
+                "Submit"
+              )
+            }
             background=" linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);"
             width="150px"
             height="45px"
             fontSize="15px"
-            shouldDisable={checkBtnReady()}
+            shouldDisable={checkBtnReady() && !submitLoading}
             disableProp={true}
           />
         </div>

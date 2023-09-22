@@ -3,6 +3,7 @@ import SharedLayout from "./layout/SharedLayout";
 import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
+import { Toaster } from "react-hot-toast";
 
 export const router = createBrowserRouter([
   {

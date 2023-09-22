@@ -7,12 +7,16 @@ import SuccessModal from "../components/SuccessModal";
 const Register = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const showSuccess = () => {
+    setShowModal(true);
+  };
+
   return (
     <Wrapper>
       <div className="left">
         <img src={registerSvg} alt="registerSvg" />
       </div>
-      <RegisterForm />
+      <RegisterForm showSuccessModal={showSuccess} />
       {showModal && <SuccessModal setShow={setShowModal} isShow={showModal} />}
     </Wrapper>
   );
