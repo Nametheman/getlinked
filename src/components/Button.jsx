@@ -17,10 +17,10 @@ const Button = ({
   marginBottom,
   fontWeight,
   fontSize,
+  shouldDisable,
+  disableProp,
+  onClick,
 }) => {
-  const btnOnClickHandler = () => {
-    action();
-  };
   return (
     <ButtonWrapper
       $border={border}
@@ -34,7 +34,8 @@ const Button = ({
       $marginBottom={marginBottom}
       $fontWeight={fontWeight}
       $fontSize={fontSize}
-      onClick={btnOnClickHandler}
+      onClick={onClick}
+      disabled={disableProp ? !shouldDisable : false}
     >
       {iconType === "img" ? <img src={icon} alt="icon_png" /> : icon}
       {text}
@@ -61,9 +62,11 @@ const ButtonWrapper = styled.button`
     props.$marginBottom ? props.$marginBottom : "0px"};
   font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : "normal")};
   font-size: ${(props) => (props.$fontSize ? props.$fontSize : "1rem")};
+  &:disabled {
+    background: #3d3d3d;
+  }
   svg {
     font-size: ${(props) => (props.$svgSize ? props.$svgSize : "unset")};
     font-weight: ${(props) => (props.$svgWeight ? props.$svgWeight : "unset")};
   }
 `;
-`

@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import SharedLayout from "./layout/SharedLayout";
+import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
+import Register from "./pages/Register";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +12,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

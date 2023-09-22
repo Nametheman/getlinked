@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { colors } from "../bits/colors";
 import cell from "../assets/images/cell.svg";
 import location from "../assets/images/location.svg";
-import instagram from "../assets/images/instagram.svg";
-import x from "../assets/images/x.svg";
-import facebook from "../assets/images/facebook.svg";
-import linkedin from "../assets/images/linkedin.svg";
+import Socials from "./Socials";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <Wrapper>
@@ -14,7 +13,9 @@ const Footer = () => {
         <div className="firstChild">
           <div>
             <div className="logo">
-              get<span>linked</span>
+              <Link to="/">
+                get<span>linked</span>
+              </Link>
             </div>
             <p className="desc">
               Getlinked Tech Hackathon is a technology innovation program <br />
@@ -33,13 +34,16 @@ const Footer = () => {
           <p className="useful">Overview</p>
           <p className="useful">Timeline</p>
           <p className="useful">FAQs</p>
-          <p className="useful">Register</p>
+          <Link
+            className="useful"
+            style={{ textDecoration: "none" }}
+            to="/register"
+          >
+            Register
+          </Link>
           <div className="fl">
             <p>Follow us</p>
-            <img src={instagram} alt="" />
-            <img src={x} alt="" />
-            <img src={facebook} alt="" />
-            <img src={linkedin} alt="" />
+            <Socials />
           </div>
         </div>
         <div className="thirdChild">
@@ -50,7 +54,7 @@ const Footer = () => {
           </div>
           <div className="li">
             <img src={location} alt="location" className="location" />
-            <p>27,Alara Street Yaba 100012 Lagos State</p>
+            <p>27, Alara Street Yaba 100012 Lagos State</p>
           </div>
         </div>
       </div>
@@ -79,12 +83,15 @@ const Wrapper = styled.footer`
     .firstChild {
       flex: 2;
       .logo {
-        color: #fff;
-        font-family: "clash-display-bold", sans-serif;
-        font-size: 1.6rem;
-        span {
-          color: ${colors.fourth};
+        a {
+          color: #fff;
           font-family: "clash-display-bold", sans-serif;
+          font-size: 2.2rem;
+          text-decoration: none;
+          span {
+            color: ${colors.fourth};
+            font-family: "clash-display-bold", sans-serif;
+          }
         }
       }
       .desc {

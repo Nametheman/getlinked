@@ -2,12 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../bits/colors";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <NavbarWrapper>
       <div className="logo">
-        get<span>linked</span>
+        <Link to="/">
+          get<span>linked</span>
+        </Link>
       </div>
       <div className="navlinks">
         <div className="links">
@@ -20,16 +23,18 @@ const Navbar = () => {
           <a href="#" className="link">
             FAQs
           </a>
-          <a href="#" className="link">
+          <Link to="/contact" className="link">
             Contact
-          </a>
+          </Link>
         </div>
-        <Button
-          text="Register"
-          background=" linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);"
-          width="150px"
-          height="50px"
-        />
+        <Link to="/register" style={{ textDecoration: "none" }}>
+          <Button
+            text="Register"
+            background=" linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);"
+            width="150px"
+            height="50px"
+          />
+        </Link>
       </div>
     </NavbarWrapper>
   );
@@ -48,12 +53,15 @@ const NavbarWrapper = styled.nav`
   height: 100px;
 
   .logo {
-    color: #fff;
-    font-family: "clash-display-bold", sans-serif;
-    font-size: 2.2rem;
-    span {
-      color: ${colors.fourth};
+    a {
+      color: #fff;
       font-family: "clash-display-bold", sans-serif;
+      font-size: 2.2rem;
+      text-decoration: none;
+      span {
+        color: ${colors.fourth};
+        font-family: "clash-display-bold", sans-serif;
+      }
     }
   }
   .navlinks {
