@@ -11,7 +11,7 @@ import sata_gra from "../assets/images/sata_gra.svg";
 import { colors } from "../bits/colors";
 
 const Register = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   const showSuccess = () => {
     setShowModal(true);

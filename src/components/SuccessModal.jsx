@@ -96,4 +96,17 @@ const ModalContent = styled.div`
   .txt {
     margin-bottom: 2rem;
   }
+
+  @media only screen and (max-width: 450px) {
+    width: 97%;
+    img {
+      width: 300px;
+    }
+    .successText {
+      font-size: 1.4rem;
+    }
+    .successTxt2 {
+      font-size: 0.9rem;
+    }
+  }
 `;
