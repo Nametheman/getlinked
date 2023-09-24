@@ -468,7 +468,7 @@ const Wrapper = styled.div`
       }
     }
     h3 {
-      display: none;
+      display: none !important;
     }
 
     form {
