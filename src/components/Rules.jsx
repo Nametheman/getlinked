@@ -12,17 +12,17 @@ const Rules = () => {
     <Wrapper>
       <div
         className="left"
-        data-aos="fade-left"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        // data-aos="fade-left"
+        // data-aos-easing="linear"
+        // data-aos-duration="1500"
       >
         <img src={rules} alt="bigidea.png" />
       </div>
       <div
         className="right"
-        data-aos="fade-right"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        // data-aos="fade-right"
+        // data-aos-easing="linear"
+        // data-aos-duration="1500"
       >
         <h2>
           Rules and <br /> <span>Guidelines</span>

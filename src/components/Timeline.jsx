@@ -57,7 +57,6 @@ const Timeline = () => {
               key={id}
               data-aos="fade-down"
               data-aos-easing="ease-in-back"
-              // data-aos-duration="500"
               data-aos-delay={idx + 1 * 500}
             >
               <EachTimeline
@@ -103,7 +102,7 @@ const Wrapper = styled.section`
   }
   .timelineContainer {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     gap: 1rem;
     margin-top: 3rem;

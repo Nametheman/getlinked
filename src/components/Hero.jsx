@@ -13,46 +13,51 @@ import { colors } from "../bits/colors";
 import { Link } from "react-router-dom";
 import heroLens1 from "../assets/images/heroLens1.svg";
 import heroLens2 from "../assets/images/heroLens2.svg";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
     <Wrapper>
-      {/* <FadeCirlcle
-        width="800px"
-        height="800px"
-        top="-11rem"
-        left="1rem"
-        opacity="0.4"
-      />
-      <FadeCirlcle
-        width="700px"
-        height="700px"
-        top="5rem"
-        right="0"
-        opacity="0.3"
-      /> */}
       <img src={heroLens1} alt="heroLens1" className="heroLens1" />
       <img src={heroLens2} alt="heroLens2" className="heroLens2" />
       <Star top="3rem" left="10rem" />
       <Star right="38rem" top="10rem" opacity="0.3" />
       <Star right="60rem" top="40rem" opacity="0.3" />
       <Content>
-        <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
-        >
+        <div>
           <div className="topContent">
-            <p>Igniting a Revolution in HR Innovation</p>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+                "Igniting a Revolution in HR Innovation",
+                1000,
+              ]}
+              wrapper="p"
+              speed={50}
+              style={{ display: "inline-block" }}
+              repeat={Infinity}
+              cursor={false}
+            />
+
             <img src={bow} alt="bow_image" className="bow_image" />
           </div>
         </div>
         <div className="base">
-          <div
-            data-aos="fade-right"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
-          >
+          <div>
             <div className="leftPane">
               <img src={light} alt="" className="light_bulb" />
               <h2 className="getLinked">getlinked Tech</h2>
@@ -83,23 +88,9 @@ const Hero = () => {
             </div>
           </div>
           <div className="rightPane">
-            <img
-              src={globe}
-              alt="globe"
-              className="globe"
-              data-aos="fade-down-right"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
-            />
+            <img src={globe} alt="globe" className="globe" />
 
-            <img
-              src={boy}
-              alt="boy_wearing_mask"
-              className="boy"
-              // data-aos="fade-down-left"
-              // data-aos-duration="1500"
-              // data-aos-easing="linear"
-            />
+            <img src={boy} alt="boy_wearing_mask" className="boy" />
           </div>
         </div>
       </Content>

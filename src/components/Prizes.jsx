@@ -24,8 +24,10 @@ const Prizes = () => {
             Highlight of the prizes or rewards for winners and <br /> for
             participants.
           </p>
-        </div>{" "}
-        <img src={rewards} alt="rewards" className="rewards" />
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img src={rewards} alt="rewards" className="rewards" />
+        </div>
       </div>
       <img src={prizesLens1} alt="prizesLens1" className="prizesLens1" />
       <img src={prizesLens2} alt="prizesLens2" className="prizesLens2" />
@@ -177,6 +179,7 @@ const Wrapper = styled.section`
     }
     .right {
       .rewards {
+        margin-top: 3rem;
         width: 300px;
       }
     }

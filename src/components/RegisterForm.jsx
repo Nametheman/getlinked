@@ -164,7 +164,7 @@ const RegisterForm = ({ showSuccessModal }) => {
 
   return (
     <>
-      {/* {loading ? (
+      {loading ? (
         <CircleWrapper>
           <CirclesWithBar
             height="100%"
@@ -178,134 +178,134 @@ const RegisterForm = ({ showSuccessModal }) => {
             ariaLabel="circles-with-bar-loading"
           />
         </CircleWrapper>
-      ) : ( */}
-      <Wrapper>
-        <h3>Register</h3>
-        <div className="statement">
-          <p>Be part of this movement!</p>
-          <div className="walk">
-            <div className="images">
-              <img src={girl} alt="girl" />
-              <img src={boy} alt="boy" />
-            </div>
-            <p className="dots">.................................</p>
-          </div>
-        </div>
-        <p className="create">CREATE YOUR ACCOUNT</p>
-        <form action="#" onSubmit={handleRegisterFormSubmit}>
-          <div className="inputContainer">
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Team’s Name</label>
-              <input
-                type="text"
-                placeholder="Enter the name of your group"
-                name="team_name"
-                value={registerData.team_name}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Phone</label>
-              <input
-                type="text"
-                placeholder="Enter your phone number"
-                name="phone_number"
-                value={registerData.phone_number}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Email </label>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                name="email"
-                value={registerData.email}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Project Topic</label>
-              <input
-                type="text"
-                placeholder="What is your topic group project topic"
-                name="project_topic"
-                value={registerData.project_topic}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Category</label>
-              <Select
-                placeholder="Select your category"
-                options={myCategories}
-                className="selectOut"
-                classNamePrefix="selectInner"
-                onChange={setSelectedCategory}
-                required
-              />
-            </div>
-            <div className="inputWrapper">
-              <label htmlFor="teamName">Group Size</label>
-              <Select
-                placeholder="Select your category"
-                options={groupOptions}
-                className="selectOut"
-                classNamePrefix="selectInner"
-                onChange={setSelectedGroupSize}
-                required
-              />
+      ) : (
+        <Wrapper>
+          <h3>Register</h3>
+          <div className="statement">
+            <p>Be part of this movement!</p>
+            <div className="walk">
+              <div className="images">
+                <img src={girl} alt="girl" />
+                <img src={boy} alt="boy" />
+              </div>
+              <p className="dots">.................................</p>
             </div>
           </div>
-          <p className="hint">
-            Please review your registration details before submitting
-          </p>
-          <div className="checkBox">
-            <input
-              type="checkbox"
-              className="check"
-              name="privacy_poclicy_accepted"
-              checked={registerData.agreement}
-              onChange={handleFormChange}
-              required
-            />
-            <p className="checkLabel">
-              I agreed with the event terms and conditions and privacy policy
+          <p className="create">CREATE YOUR ACCOUNT</p>
+          <form action="#" onSubmit={handleRegisterFormSubmit}>
+            <div className="inputContainer">
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Team’s Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter the name of your group"
+                  name="team_name"
+                  value={registerData.team_name}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Phone</label>
+                <input
+                  type="text"
+                  placeholder="Enter your phone number"
+                  name="phone_number"
+                  value={registerData.phone_number}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Email </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  name="email"
+                  value={registerData.email}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Project Topic</label>
+                <input
+                  type="text"
+                  placeholder="What is your topic group project topic"
+                  name="project_topic"
+                  value={registerData.project_topic}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Category</label>
+                <Select
+                  placeholder="Select your category"
+                  options={myCategories}
+                  className="selectOut"
+                  classNamePrefix="selectInner"
+                  onChange={setSelectedCategory}
+                  required
+                />
+              </div>
+              <div className="inputWrapper">
+                <label htmlFor="teamName">Group Size</label>
+                <Select
+                  placeholder="Select your category"
+                  options={groupOptions}
+                  className="selectOut"
+                  classNamePrefix="selectInner"
+                  onChange={setSelectedGroupSize}
+                  required
+                />
+              </div>
+            </div>
+            <p className="hint">
+              Please review your registration details before submitting
             </p>
-          </div>
-          <div className="btnWrapper">
-            <Button
-              text={
-                submitLoading ? (
-                  <Rings
-                    height="50"
-                    width="80"
-                    color={colors.secondary}
-                    radius="6"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                    visible={true}
-                    ariaLabel="rings-loading"
-                  />
-                ) : (
-                  "Register Now"
-                )
-              }
-              background=" linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);"
-              width="100%"
-              height="50px"
-              fontSize="1rem"
-              shouldDisable={checkBtnReady() && !submitLoading}
-              disableProp={true}
-            />
-          </div>{" "}
-        </form>
-      </Wrapper>
-      {/* )} */}
+            <div className="checkBox">
+              <input
+                type="checkbox"
+                className="check"
+                name="privacy_poclicy_accepted"
+                checked={registerData.agreement}
+                onChange={handleFormChange}
+                required
+              />
+              <p className="checkLabel">
+                I agreed with the event terms and conditions and privacy policy
+              </p>
+            </div>
+            <div className="btnWrapper">
+              <Button
+                text={
+                  submitLoading ? (
+                    <Rings
+                      height="50"
+                      width="80"
+                      color={colors.secondary}
+                      radius="6"
+                      wrapperStyle={{}}
+                      wrapperClass=""
+                      visible={true}
+                      ariaLabel="rings-loading"
+                    />
+                  ) : (
+                    "Register Now"
+                  )
+                }
+                background=" linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);"
+                width="100%"
+                height="50px"
+                fontSize="1rem"
+                shouldDisable={checkBtnReady() && !submitLoading}
+                disableProp={true}
+              />
+            </div>{" "}
+          </form>
+        </Wrapper>
+      )}
     </>
   );
 };

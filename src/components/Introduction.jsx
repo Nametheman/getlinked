@@ -11,17 +11,17 @@ const Introduction = () => {
     <Wrapper>
       <div
         className="left"
-        data-aos="fade-right"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        // data-aos="fade-right"
+        // data-aos-easing="linear"
+        // data-aos-duration="1500"
       >
         <img src={big_idea} alt="bigidea.png" />
       </div>
       <div
         className="right"
-        data-aos="fade-left"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        // data-aos="fade-left"
+        // data-aos-easing="linear"
+        // data-aos-duration="1500"
       >
         <h2>
           Introduction to getlinked <br /> <span>tech Hackathon 1.0</span>

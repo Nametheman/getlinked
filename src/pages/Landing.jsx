@@ -7,25 +7,29 @@ import Prizes from "../components/Prizes";
 import Rules from "../components/Rules";
 import Sponsors from "../components/Sponsors";
 import Timeline from "../components/Timeline";
+import SuspenseWrapper from "../layout/SuspenseWrapper";
+import Loader from "../bits/Loader";
 
 const Landing = () => {
   return (
     <div>
       <Hero />
-      <Introduction />
-      <Rules />
-      <section id="overview">
-        <Criteria />
-      </section>
-      <section id="faqs">
-        <Faq />
-      </section>
-      <section id="timeline">
-        <Timeline />
-      </section>
-      <Prizes />
-      <Sponsors />
-      <Policies />
+      <SuspenseWrapper fallback={Loader}>
+        <Introduction />
+        <Rules />
+        <section id="overview">
+          <Criteria />
+        </section>
+        <section id="faqs">
+          <Faq />
+        </section>
+        <section id="timeline">
+          <Timeline />
+        </section>
+        <Prizes />
+        <Sponsors />
+        <Policies />
+      </SuspenseWrapper>
     </div>
   );
 };

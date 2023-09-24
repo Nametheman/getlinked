@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../bits/colors";
@@ -135,6 +137,7 @@ const Wrapper2 = styled.section`
     align-items: center;
     gap: 1rem;
     width: 100%;
+    /* border: 1px solid red; */
     /* text-align: left; */
     .left {
       display: flex;

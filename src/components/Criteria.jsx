@@ -17,9 +17,9 @@ const Criteria = () => {
         src={criteria}
         alt="criteria_img"
         className="criteria_img"
-        data-aos="fade-right"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        // data-aos="fade-right"
+        // data-aos-easing="linear"
+        // data-aos-duration="1500"
       />
       <div className="right">
         <h2 data-aos="fade-down">
@@ -29,9 +29,9 @@ const Criteria = () => {
           return (
             <div
               key={idx}
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              data-aos-delay={idx + 1 * 1000}
+              // data-aos="fade-down"
+              // data-aos-duration="1000"
+              // data-aos-delay={idx + 1 * 1000}
             >
               <p>
                 <span>{criteria.key}</span> {criteria.value}

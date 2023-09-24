@@ -125,15 +125,13 @@ const NavbarWrapper = styled.nav`
   }
   .mobileMenu {
     display: none;
-    .menuBurger {
-    }
   }
 
   @media only screen and (max-width: 1100px) {
     .navlinks {
       display: none;
     }
-    .menuBurger {
+    .mobileMenu {
       display: block;
     }
   }
