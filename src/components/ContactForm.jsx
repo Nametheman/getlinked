@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { colors } from "../bits/colors";
 import Button from "./Button";
 import { emailPattern } from "../helpers/verifiers";
 import { Base_Url } from "../config/config";
 import toast from "react-hot-toast";
-import { Rings, CirclesWithBar } from "react-loader-spinner";
+import { Rings } from "react-loader-spinner";
 
 const ContactForm = () => {
   const [contactData, setContactData] = useState({
@@ -78,6 +78,9 @@ const ContactForm = () => {
     <Wrapper>
       <h3>Questions or need assistance?</h3>
       <h3>Let us know about it!</h3>
+      <p className="info">
+        Email us below to any question related to our event
+      </p>
       <form onSubmit={formSubmitHandler}>
         <input
           type="text"
@@ -150,6 +153,9 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
     font-family: "clash-display-bold", sans-serif;
   }
+  .info {
+    display: none;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -194,6 +200,21 @@ const Wrapper = styled.div`
     .btnWrapper {
       display: flex;
       justify-content: center;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    box-shadow: unset;
+    background: transparent;
+    padding: 1rem 1rem;
+    h3 {
+      width: 70%;
+      font-size: 1.4rem;
+    }
+    .info {
+      display: block;
+      margin-top: 2rem;
+      width: 100%;
+      color: #fff;
     }
   }
 `;

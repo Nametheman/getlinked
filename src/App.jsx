@@ -3,7 +3,9 @@ import SharedLayout from "./layout/SharedLayout";
 import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
-import { Toaster } from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
 
 export const router = createBrowserRouter([
   {

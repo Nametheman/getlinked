@@ -1,21 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import styled from "styled-components";
 import rules from "../assets/images/rules.svg";
-import arrow from "../assets/images/arrow.svg";
-import star_pu from "../assets/images/star_pu.svg";
-import sata_gra from "../assets/images/sata_gra.svg";
 import { colors } from "../bits/colors";
 import Star from "./Star";
-import FadeCirlcle from "./FadeCirlcle";
+import rulesLens1 from "../assets/images/rulesLens1.svg";
+import rulesLens2 from "../assets/images/rulesLens2.svg";
+// import FadeCirlcle from "./FadeCirlcle";
 
 const Rules = () => {
   return (
     <Wrapper>
-      <div className="left">
+      <div
+        className="left"
+        data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <img src={rules} alt="bigidea.png" />
       </div>
-      <div className="right">
+      <div
+        className="right"
+        data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <h2>
           Rules and <br /> <span>Guidelines</span>
         </h2>
@@ -30,7 +38,7 @@ const Rules = () => {
       </div>
       <Star top="25%" left="30%" opacity="0.3" />
       <Star top="69%" left="44%" />
-      <FadeCirlcle
+      {/* <FadeCirlcle
         width="700px"
         height="700px"
         top="-12rem"
@@ -43,7 +51,9 @@ const Rules = () => {
         bottom="-16rem"
         right="0px"
         opacity="0.3"
-      />
+      /> */}
+      <img src={rulesLens1} alt="rulesLens1" className="rulesLens1" />
+      <img src={rulesLens2} alt="rulesLens2" className="rulesLens2" />
     </Wrapper>
   );
 };
@@ -59,6 +69,18 @@ const Wrapper = styled.section`
   padding: 1rem 7rem;
   position: relative;
   border-bottom: 1px solid #ffffff2e;
+  .rulesLens1 {
+    position: absolute;
+    left: 1%;
+    top: -19rem;
+    mix-blend-mode: hard-light;
+  }
+  .rulesLens2 {
+    position: absolute;
+    right: 0;
+    bottom: -25rem;
+    mix-blend-mode: hard-light;
+  }
 
   .left {
     flex: 1;
@@ -68,6 +90,8 @@ const Wrapper = styled.section`
   }
   .right {
     flex: 1;
+    position: relative;
+    z-index: 1;
 
     h2 {
       color: #fff;
@@ -101,5 +125,60 @@ const Wrapper = styled.section`
     position: absolute;
     top: 30%;
     right: 10%;
+  }
+  @media only screen and (max-width: 1350px) {
+    .left {
+      img {
+        width: 600px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .left {
+      img {
+        width: 500px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .left {
+      img {
+        width: 450px;
+      }
+    }
+    .right {
+      h2 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    display: block;
+    text-align: center;
+    .rulesLens1 {
+      width: 600px;
+    }
+    .rulesLens2 {
+      width: 300px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 1rem 2rem;
+    .rulesLens1 {
+      width: 200px;
+    }
+    .rulesLens2 {
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .left {
+      img {
+        width: 300px;
+      }
+    }
   }
 `;

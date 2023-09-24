@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable react/prop-types */
 const OneFaq = ({ faq, index, toggleFAQ }) => {
   return (
     <div
@@ -14,5 +13,3 @@ const OneFaq = ({ faq, index, toggleFAQ }) => {
 };
 
 export default OneFaq;
-
-const Wrapper = styled.div``;

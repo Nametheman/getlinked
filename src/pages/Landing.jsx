@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import Criteria from "../components/Criteria";
 import Faq from "../components/Faq";
 import Hero from "../components/Hero";
@@ -16,9 +14,15 @@ const Landing = () => {
       <Hero />
       <Introduction />
       <Rules />
-      <Criteria />
-      <Faq />
-      <Timeline />
+      <section id="overview">
+        <Criteria />
+      </section>
+      <section id="faqs">
+        <Faq />
+      </section>
+      <section id="timeline">
+        <Timeline />
+      </section>
       <Prizes />
       <Sponsors />
       <Policies />

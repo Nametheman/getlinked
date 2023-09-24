@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import faq from "../assets/images/faq.svg";
 import { colors } from "../bits/colors";
 import OneFaq from "./OneFaq";
 import star_pu from "../assets/images/star_pu.svg";
-import sata_gra from "../assets/images/sata_gra.svg";
 import Star from "./Star";
 import questionBold from "../assets/images/questionBold.svg";
 import brightStar from "../assets/images/brightStar.svg";
@@ -15,7 +14,7 @@ const Faq = () => {
       question: "Can I work on a project I started before the hackathon?",
       answer:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      open: true,
+      open: false,
     },
     {
       question: "What happens if I need help during the hackathon?",
@@ -86,7 +85,6 @@ const Faq = () => {
       <Star bottom="4rem" right="25%" />
       <Star bottom="25rem" left="45%" opacity="0.3" />
       <img src={star_pu} alt="star_pu" className="star_pu" />
-      {/* <img src={sata_gra} alt="sata_gra" className="sata_gra" /> */}
       <img src={question} alt="question" className="question" />
       <img src={brightStar} alt="brightStar" className="brightStar" />
       <img src={brightStar} alt="brightStar" className="brightStar2" />
@@ -169,6 +167,53 @@ const Wrapper = styled.section`
   .right {
     .faq {
       width: 700px;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .right {
+      .faq {
+        width: 600px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    .right {
+      .faq {
+        width: 500px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .right {
+      .faq {
+        width: 410px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    display: block;
+    .right {
+      display: flex;
+      justify-content: center;
+      .faq {
+        width: 410px;
+        margin: 0 auto;
+      }
+    }
+    .left {
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 3rem 2rem;
+    .right {
+      .faq {
+        width: 210px;
+      }
     }
   }
 `;

@@ -46,6 +46,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  /* background-color: red; */
   background-color: #150e28;
 }
 button {
@@ -122,6 +123,7 @@ button {
 .css-13cymwt-control {
   background-color: transparent !important;
   height: 50px !important;
+  margin-bottom: 2rem;
 }
 .css-art2ul-ValueContainer2 {
   padding: 0 1.4rem !important;

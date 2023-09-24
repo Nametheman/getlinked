@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import EachTimeline from "./EachTimeline";
 import Star from "./Star";
@@ -54,14 +53,21 @@ const Timeline = () => {
         {faqs.map((faq, idx) => {
           const { title, text, direction, id } = faq;
           return (
-            <EachTimeline
+            <div
               key={id}
-              id={id}
-              direction={direction}
-              text={text}
-              title={title}
-              index={idx}
-            />
+              data-aos="fade-down"
+              data-aos-easing="ease-in-back"
+              // data-aos-duration="500"
+              data-aos-delay={idx + 1 * 500}
+            >
+              <EachTimeline
+                id={id}
+                direction={direction}
+                text={text}
+                title={title}
+                index={idx}
+              />
+            </div>
           );
         })}
       </div>
@@ -101,5 +107,8 @@ const Wrapper = styled.section`
     flex-direction: column;
     gap: 1rem;
     margin-top: 3rem;
+  }
+  @media only screen and (max-width: 450px) {
+    /* display: none; */
   }
 `;

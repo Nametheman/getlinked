@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import styled from "styled-components";
 import big_idea from "../assets/images/big_idea.svg";
 import arrow from "../assets/images/arrow.svg";
@@ -10,10 +9,20 @@ import { colors } from "../bits/colors";
 const Introduction = () => {
   return (
     <Wrapper>
-      <div className="left">
+      <div
+        className="left"
+        data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <img src={big_idea} alt="bigidea.png" />
       </div>
-      <div className="right">
+      <div
+        className="right"
+        data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <h2>
           Introduction to getlinked <br /> <span>tech Hackathon 1.0</span>
         </h2>
@@ -84,5 +93,49 @@ const Wrapper = styled.section`
     position: absolute;
     top: 30%;
     right: 10%;
+  }
+  @media only screen and (max-width: 1100px) {
+    .left {
+      img {
+        width: 400px;
+      }
+    }
+    .right {
+      h2 {
+        font-size: 1.6rem;
+      }
+      P {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    display: block;
+    text-align: center;
+    .left {
+      img {
+        width: 400px;
+      }
+    }
+    .right {
+      position: relative;
+      z-index: 2;
+      margin-top: 7rem;
+
+      h2 {
+        font-size: 1.6rem;
+      }
+      P {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 1rem 2rem;
+    .left {
+      img {
+        width: 300px;
+      }
+    }
   }
 `;

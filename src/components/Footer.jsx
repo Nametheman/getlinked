@@ -1,10 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 import { colors } from "../bits/colors";
 import cell from "../assets/images/cell.svg";
 import location from "../assets/images/location.svg";
 import Socials from "./Socials";
 import { Link } from "react-router-dom";
+import star_pu from "../assets/images/star_pu.svg";
+import Star from "./Star";
 
 const Footer = () => {
   return (
@@ -61,6 +62,10 @@ const Footer = () => {
       <div className="second">
         <p>All rights reserved. © getlinked Ltd.</p>
       </div>
+      <Star top="6rem" left="5%" width="15px" />
+      <Star top="6rem" right="35%" width="15px" opacity="0.4" />
+      <Star bottom="11rem" right="5%" width="15px" />
+      <img src={star_pu} alt="star_pu" className="star_pu" />
     </Wrapper>
   );
 };
@@ -72,8 +77,21 @@ const Wrapper = styled.footer`
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1rem 7rem;
+  padding: 4rem 8rem;
   position: relative;
+
+  .star_pu {
+    position: absolute;
+    bottom: 7rem;
+    left: 48%;
+    width: 14px;
+  }
+  .sata_gra {
+    position: absolute;
+    bottom: 27rem;
+    left: 29%;
+    opacity: 0.4;
+  }
   .first {
     display: flex;
     /* align-items: center; */
@@ -167,6 +185,52 @@ const Wrapper = styled.footer`
       color: #fff;
       /* line-height: 1.9; */
       font-size: 0.9rem;
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    padding: 4rem 4rem;
+  }
+  @media only screen and (max-width: 1000px) {
+    .first {
+      .firstChild {
+        .desc {
+          font-size: 0.7rem;
+        }
+        .fCLast {
+          .fCLFirst,
+          .fCLSecond {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .secondChild {
+        .title {
+          font-size: 0.9rem;
+        }
+        .useful {
+          font-size: 0.8rem;
+        }
+      }
+      .thirdChild {
+        .title {
+          font-size: 0.9rem;
+        }
+        .li {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+    .second {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .first {
+      flex-direction: column;
     }
   }
 `;

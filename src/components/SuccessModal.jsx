@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect } from "react";
 import styled from "styled-components";
 import { createPortal } from "react-dom";
 import { colors } from "../bits/colors";

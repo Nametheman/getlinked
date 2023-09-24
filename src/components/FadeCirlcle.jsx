@@ -14,9 +14,7 @@ const FadeCirlcle = ({ width, height, top, left, opacity, right, bottom }) => {
       $opacity={opacity}
       $right={right}
       $bottom={bottom}
-    >
-      FadeCirlcle
-    </Wrapper>
+    ></Wrapper>
   );
 };
 

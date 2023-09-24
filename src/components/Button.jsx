@@ -8,7 +8,6 @@ const Button = ({
   background,
   text,
   icon,
-  action,
   isTransparent,
   iconType,
   color,
@@ -47,8 +46,8 @@ export default Button;
 
 const ButtonWrapper = styled.button`
   border: ${(props) => (props.$border ? props.$border : "none")};
-  height: ${(props) => (props.$height ? props.$height : "35px")};
-  width: ${(props) => (props.$width ? props.$width : "100%")};
+  height: 50px;
+  width: 150px;
   background: ${(props) =>
     props.$isTransparent ? "transparent" : props.$background};
   display: ${(props) => (props.$icon ? "flex" : "flex")};
@@ -61,12 +60,17 @@ const ButtonWrapper = styled.button`
   margin-bottom: ${(props) =>
     props.$marginBottom ? props.$marginBottom : "0px"};
   font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : "normal")};
-  font-size: ${(props) => (props.$fontSize ? props.$fontSize : "1rem")};
+  font-size: 0.8rem;
   &:disabled {
     background: #3d3d3d;
   }
   svg {
     font-size: ${(props) => (props.$svgSize ? props.$svgSize : "unset")};
     font-weight: ${(props) => (props.$svgWeight ? props.$svgWeight : "unset")};
+  }
+  @media only screen and (max-width: 420px) {
+    height: 35px;
+    width: 120px;
+    font-size: 0.6rem;
   }
 `;
